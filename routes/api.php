@@ -30,6 +30,8 @@ Route::apiResource('niveau', 'NiveauControlleur');
 
 Route::apiResource('professeur', 'ProfesseurControlleur');
 
+Route::apiResource('emploitime', 'emploitimeController');
 Route::middleware('auth:api')->group(function() {
     
+
 });

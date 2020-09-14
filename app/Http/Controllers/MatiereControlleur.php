@@ -14,7 +14,9 @@ class MatiereControlleur extends Controller
      */
     public function index()
     {
-        //
+        $matieres= Matiere::all();
+        return view('nice-admin-lite-master.nice-html.ltr.starter-kit',compact('matieres'));
+        return Matiere::orderByDesc('created_at')->get();
     }
 
     /**
