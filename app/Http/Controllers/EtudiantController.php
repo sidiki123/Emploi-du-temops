@@ -40,7 +40,11 @@ class EtudiantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (Etudiant::create($request->all())){
+            return response()->json([
+                'success'=> 'Etudiant crée avec succes'
+            ],200);
+        };
     }
 
     /**

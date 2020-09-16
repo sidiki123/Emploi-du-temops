@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::apiResource('dating', 'DatingControlleur');
 
-Route::apiResource('etudiant', 'EtudiantControlleur');
+Route::apiResource('etudiant', 'EtudiantController');
 
 Route::apiResource('horaire', 'HoraireControlleur');
 

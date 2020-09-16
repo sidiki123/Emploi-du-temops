@@ -26,4 +26,4 @@ Route::get('/form', 'HomeController@form')->name('form');
 Route::get('/table', 'HomeController@table')->name('table');
 Route::get('/icon', 'HomeController@icon')->name('icon');
 Route::get('/blank', 'HomeController@blank')->name('blank');
-Route::get('/mail', 'EtudiantController@next')->name('mail');
+Route::get('/liste', 'HomeController@liste')->name('liste');

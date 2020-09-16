@@ -53,7 +53,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">@</span>
             </div>
-            <input type="date" class="form-control" id="pure-date" aria-describedby="date-design-prepend">
+            <input type="date" class="form-control" name="date_de_debut" id="pure-date" aria-describedby="date-design-prepend">
             </div>
           </div>
      
@@ -64,7 +64,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text">@</span>
             </div>
-            <input type="date" class="form-control ppDate" id="from-date" aria-describedby="date-design-prepend">
+            <input type="date" class="form-control ppDate" name="date_de_fin" id="from-date" aria-describedby="date-design-prepend">
             </div>
           </div>
      
@@ -84,1237 +84,497 @@
       <th>Mercredi</th>
       <th>Jeudi</th>
       <th>Vendredi</th>
-      <th>Samedi</th>
+    
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>7:00 - 8:00</th>
       <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere">
-  <option selected>Open this select menu</option>
+      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere1">
+  <option selected>Choisir la matiere</option>
   @foreach  ($matieres as $matiere)
   <option value={{ $matiere->id }} > 
     {{ $matiere->nom }}
  </option>
  @endforeach
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="" >
-  <option selected>Open this select menu</option>
-  @foreach  ($matieres as $matiere)
-  <option {{ $matiere->idprofesseur }} > 
-    {{ $matiere->matprof->nom_prof }}
- </option>
- @endforeach
-  <option value="2">Two</option>
-  <option value="3">Three</option>
 </select>
       </td>
       <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
+        <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere2">
+    <option selected>Choisir la matiere</option>
+    @foreach  ($matieres as $matiere)
+    <option value={{ $matiere->id }} > 
+      {{ $matiere->nom }}
+   </option>
+   @endforeach
+  </select>
+        </td>
+        <td  style="width:14%">
+          <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere3">
+      <option selected>Choisir la matiere</option>
+      @foreach  ($matieres as $matiere)
+      <option value={{ $matiere->id }} > 
+        {{ $matiere->nom }}
+     </option>
+     @endforeach
+    </select>
+          </td>
+          <td  style="width:14%">
+            <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere4">
+        <option selected>Choisir la matiere</option>
+        @foreach  ($matieres as $matiere)
+        <option value={{ $matiere->id }} > 
+          {{ $matiere->nom }}
+       </option>
+       @endforeach
+      </select>
+            </td>
+            <td  style="width:14%">
+              <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere5">
+          <option selected>Choisir la matiere</option>
+          @foreach  ($matieres as $matiere)
+          <option value={{ $matiere->id }} > 
+            {{ $matiere->nom }}
+         </option>
+         @endforeach
+        </select>
+              </td>
+     
     </tr>
     <tr>
       <th>8:00 - 9:00</th>
       <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
- 
-  <option value="1"></option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
+        <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere6">
+    <option selected>Choisir la matiere</option>
+    @foreach  ($matieres as $matiere)
+    <option value={{ $matiere->id }} > 
+      {{ $matiere->nom }}
+   </option>
+   @endforeach
+  </select>
+        </td>
+        <td  style="width:14%">
+          <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere7">
+      <option selected>Choisir la matiere</option>
+      @foreach  ($matieres as $matiere)
+      <option value={{ $matiere->id }} > 
+        {{ $matiere->nom }}
+     </option>
+     @endforeach
+    </select>
+          </td>
+          <td  style="width:14%">
+            <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere8">
+        <option selected>Choisir la matiere</option>
+        @foreach  ($matieres as $matiere)
+        <option value={{ $matiere->id }} > 
+          {{ $matiere->nom }}
+       </option>
+       @endforeach
+      </select>
+            </td>
+            <td  style="width:14%">
+              <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere9">
+          <option selected>Choisir la matiere</option>
+          @foreach  ($matieres as $matiere)
+          <option value={{ $matiere->id }} > 
+            {{ $matiere->nom }}
+         </option>
+         @endforeach
+        </select>
+              </td>
+              <td  style="width:14%">
+                <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere10">
+            <option selected>Choisir la matiere</option>
+            @foreach  ($matieres as $matiere)
+            <option value={{ $matiere->id }} > 
+              {{ $matiere->nom }}
+           </option>
+           @endforeach
+          </select>
+                </td>
+  
     </tr>
     <tr>
       <th>9:00 - 10:00</th>
       <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
+        <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere11">
+    <option selected>Choisir la matiere</option>
+    @foreach  ($matieres as $matiere)
+    <option value={{ $matiere->id }} > 
+      {{ $matiere->nom }}
+   </option>
+   @endforeach
+  </select>
+        </td>
+        <td  style="width:14%">
+          <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere12">
+      <option selected>Choisir la matiere</option>
+      @foreach  ($matieres as $matiere)
+      <option value={{ $matiere->id }} > 
+        {{ $matiere->nom }}
+     </option>
+     @endforeach
+    </select>
+          </td>
+          <td  style="width:14%">
+            <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere13">
+        <option selected>Choisir la matiere</option>
+        @foreach  ($matieres as $matiere)
+        <option value={{ $matiere->id }} > 
+          {{ $matiere->nom }}
+       </option>
+       @endforeach
+      </select>
+            </td>
+            <td  style="width:14%">
+              <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere14">
+          <option selected>Choisir la matiere</option>
+          @foreach  ($matieres as $matiere)
+          <option value={{ $matiere->id }} > 
+            {{ $matiere->nom }}
+         </option>
+         @endforeach
+        </select>
+              </td>
+              <td  style="width:14%">
+                <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere15">
+            <option selected>Choisir la matiere</option>
+            @foreach  ($matieres as $matiere)
+            <option value={{ $matiere->id }} > 
+              {{ $matiere->nom }}
+           </option>
+           @endforeach
+          </select>
+                </td>
+      
     </tr>
+   
     <tr>
       <th>10:00 - 11:00</th>
       <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-    </tr>
-    <tr>
-      <th>10:00 - 11:00</th>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
+        <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere16">
+    <option selected>Choisir la matiere</option>
+    @foreach  ($matieres as $matiere)
+    <option value={{ $matiere->id }} > 
+      {{ $matiere->nom }}
+   </option>
+   @endforeach
+  </select>
+        </td>
+        <td  style="width:14%">
+          <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere17">
+      <option selected>Choisir la matiere</option>
+      @foreach  ($matieres as $matiere)
+      <option value={{ $matiere->id }} > 
+        {{ $matiere->nom }}
+     </option>
+     @endforeach
+    </select>
+          </td>
+          <td  style="width:14%">
+            <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere18">
+        <option selected>Choisir la matiere</option>
+        @foreach  ($matieres as $matiere)
+        <option value={{ $matiere->id }} > 
+          {{ $matiere->nom }}
+       </option>
+       @endforeach
+      </select>
+            </td>
+            <td  style="width:14%">
+              <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere19">
+          <option selected>Choisir la matiere</option>
+          @foreach  ($matieres as $matiere)
+          <option value={{ $matiere->id }} > 
+            {{ $matiere->nom }}
+         </option>
+         @endforeach
+        </select>
+              </td>
+              <td  style="width:14%">
+                <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere20">
+            <option selected>Choisir la matiere</option>
+            @foreach  ($matieres as $matiere)
+            <option value={{ $matiere->id }} > 
+              {{ $matiere->nom }}
+           </option>
+           @endforeach
+          </select>
+                </td>
+     
     </tr>
     <tr>
       <th>11:00 - 12:00</th>
       <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
+        <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere21">
+    <option selected>Choisir la matiere</option>
+    @foreach  ($matieres as $matiere)
+    <option value={{ $matiere->id }} > 
+      {{ $matiere->nom }}
+   </option>
+   @endforeach
+  </select>
+        </td>
+        <td  style="width:14%">
+          <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere22">
+      <option selected>Choisir la matiere</option>
+      @foreach  ($matieres as $matiere)
+      <option value={{ $matiere->id }} > 
+        {{ $matiere->nom }}
+     </option>
+     @endforeach
+    </select>
+          </td>
+          <td  style="width:14%">
+            <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere23">
+        <option selected>Choisir la matiere</option>
+        @foreach  ($matieres as $matiere)
+        <option value={{ $matiere->id }} > 
+          {{ $matiere->nom }}
+       </option>
+       @endforeach
+      </select>
+            </td>
+            <td  style="width:14%">
+              <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere24">
+          <option selected>Choisir la matiere</option>
+          @foreach  ($matieres as $matiere)
+          <option value={{ $matiere->id }} > 
+            {{ $matiere->nom }}
+         </option>
+         @endforeach
+        </select>
+              </td>
+              <td  style="width:14%">
+                <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere25">
+            <option selected>Choisir la matiere</option>
+            @foreach  ($matieres as $matiere)
+            <option value={{ $matiere->id }} > 
+              {{ $matiere->nom }}
+           </option>
+           @endforeach
+          </select>
+                </td>
+     
     </tr>
-    <tr>
-      <th>12:00 - 13:00</th>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-    </tr>
-    <tr>
-      <th>13:00 - 14:00</th>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-    </tr>
-    <tr>
+   <tr>
       <th>14:00 - 15:00</th>
       <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
+        <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere26">
+    <option selected>Choisir la matiere</option>
+    @foreach  ($matieres as $matiere)
+    <option value={{ $matiere->id }} > 
+      {{ $matiere->nom }}
+   </option>
+   @endforeach
+  </select>
+        </td>
+        <td  style="width:14%">
+          <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere27">
+      <option selected>Choisir la matiere</option>
+      @foreach  ($matieres as $matiere)
+      <option value={{ $matiere->id }} > 
+        {{ $matiere->nom }}
+     </option>
+     @endforeach
+    </select>
+          </td>
+          <td  style="width:14%">
+            <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere28">
+        <option selected>Choisir la matiere</option>
+        @foreach  ($matieres as $matiere)
+        <option value={{ $matiere->id }} > 
+          {{ $matiere->nom }}
+       </option>
+       @endforeach
+      </select>
+            </td>
+            <td  style="width:14%">
+              <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere29">
+          <option selected>Choisir la matiere</option>
+          @foreach  ($matieres as $matiere)
+          <option value={{ $matiere->id }} > 
+            {{ $matiere->nom }}
+         </option>
+         @endforeach
+        </select>
+              </td>
+              <td  style="width:14%">
+                <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere30">
+            <option selected>Choisir la matiere</option>
+            @foreach  ($matieres as $matiere)
+            <option value={{ $matiere->id }} > 
+              {{ $matiere->nom }}
+           </option>
+           @endforeach
+          </select>
+                </td>
+    
     </tr>
     <tr>
       <th>15:00 - 16:00</th>
       <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
+        <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere31">
+    <option selected>Choisir la matiere</option>
+    @foreach  ($matieres as $matiere)
+    <option value={{ $matiere->id }} > 
+      {{ $matiere->nom }}
+   </option>
+   @endforeach
+  </select>
+        </td>
+        <td  style="width:14%">
+          <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere32">
+      <option selected>Choisir la matiere</option>
+      @foreach  ($matieres as $matiere)
+      <option value={{ $matiere->id }} > 
+        {{ $matiere->nom }}
+     </option>
+     @endforeach
+    </select>
+          </td>
+          <td  style="width:14%">
+            <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere33">
+        <option selected>Choisir la matiere</option>
+        @foreach  ($matieres as $matiere)
+        <option value={{ $matiere->id }} > 
+          {{ $matiere->nom }}
+       </option>
+       @endforeach
+      </select>
+            </td>
+            <td  style="width:14%">
+              <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere34">
+          <option selected>Choisir la matiere</option>
+          @foreach  ($matieres as $matiere)
+          <option value={{ $matiere->id }} > 
+            {{ $matiere->nom }}
+         </option>
+         @endforeach
+        </select>
+              </td>
+              <td  style="width:14%">
+                <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere35">
+            <option selected>Choisir la matiere</option>
+            @foreach  ($matieres as $matiere)
+            <option value={{ $matiere->id }} > 
+              {{ $matiere->nom }}
+           </option>
+           @endforeach
+          </select>
+                </td>
     </tr>
     <tr>
       <th>16:00 - 17:00</th>
       <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
+        <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere36">
+    <option selected>Choisir la matiere</option>
+    @foreach  ($matieres as $matiere)
+    <option value={{ $matiere->id }} > 
+      {{ $matiere->nom }}
+   </option>
+   @endforeach
+  </select>
+        </td>
+        <td  style="width:14%">
+          <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere37">
+      <option selected>Choisir la matiere</option>
+      @foreach  ($matieres as $matiere)
+      <option value={{ $matiere->id }} > 
+        {{ $matiere->nom }}
+     </option>
+     @endforeach
+    </select>
+          </td>
+          <td  style="width:14%">
+            <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere38">
+        <option selected>Choisir la matiere</option>
+        @foreach  ($matieres as $matiere)
+        <option value={{ $matiere->id }} > 
+          {{ $matiere->nom }}
+       </option>
+       @endforeach
+      </select>
+            </td>
+            <td  style="width:14%">
+              <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere39">
+          <option selected>Choisir la matiere</option>
+          @foreach  ($matieres as $matiere)
+          <option value={{ $matiere->id }} > 
+            {{ $matiere->nom }}
+         </option>
+         @endforeach
+        </select>
+              </td>
+              <td  style="width:14%">
+                <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere40">
+            <option selected>Choisir la matiere</option>
+            @foreach  ($matieres as $matiere)
+            <option value={{ $matiere->id }} > 
+              {{ $matiere->nom }}
+           </option>
+           @endforeach
+          </select>
+                </td>
+   
     </tr>
     <tr>
       <th>17:00 - 18:00</th>
       <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
+        <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere41">
+    <option selected>Choisir la matiere</option>
+    @foreach  ($matieres as $matiere)
+    <option value={{ $matiere->id }} > 
+      {{ $matiere->nom }}
+   </option>
+   @endforeach
+  </select>
+        </td>
+        <td  style="width:14%">
+          <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere42">
+      <option selected>Choisir la matiere</option>
+      @foreach  ($matieres as $matiere)
+      <option value={{ $matiere->id }} > 
+        {{ $matiere->nom }}
+     </option>
+     @endforeach
+    </select>
+          </td>
+          <td  style="width:14%">
+            <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere43">
+        <option selected>Choisir la matiere</option>
+        @foreach  ($matieres as $matiere)
+        <option value={{ $matiere->id }} > 
+          {{ $matiere->nom }}
+       </option>
+       @endforeach
+      </select>
+            </td>
+            <td  style="width:14%">
+              <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere44">
+          <option selected>Choisir la matiere</option>
+          @foreach  ($matieres as $matiere)
+          <option value={{ $matiere->id }} > 
+            {{ $matiere->nom }}
+         </option>
+         @endforeach
+        </select>
+              </td>
+              <td  style="width:14%">
+                <select class="custom-select custom-select-lg-1 mb-3 sm-2" style=""  name="idmatiere45">
+            <option selected>Choisir la matiere</option>
+            @foreach  ($matieres as $matiere)
+            <option value={{ $matiere->id }} > 
+              {{ $matiere->nom }}
+           </option>
+           @endforeach
+          </select>
+                </td>
+ 
     </tr>
-    <tr>
-      <th>18:00 - 19:00</th>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-    </tr>
-    <tr>
-      <th>19:00 - 20:00</th>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-      <td  style="width:14%">
-      <select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-<select class="custom-select custom-select-lg-1 mb-3 sm-2" style="">
-  <option selected>Open this select menu</option>
-  <option value="1">One</option>
-  <option value="2">Two</option>
-  <option value="3">Three</option>
-</select>
-      </td>
-    </tr>
+    
   </tbody>
 </table>
 

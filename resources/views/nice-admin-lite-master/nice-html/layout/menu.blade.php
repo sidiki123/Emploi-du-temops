@@ -152,10 +152,10 @@
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('profile')}}" aria-expanded="false">
                                 <i class="mdi mdi-account-network"></i>
-                                <span class="hide-menu">Profile</span>
+                                <span class="hide-menu">Enregistrer etudiant</span>
                             </a>
                         </li>
-                         <li class="sidebar-item">
+                         {{-- <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('form')}}" aria-expanded="false">
                                 <i class="mdi mdi-arrange-bring-forward"></i>
                                 <span class="hide-menu">Form Basic</span>
@@ -172,17 +172,17 @@
                                 <i class="mdi mdi-face"></i>
                                 <span class="hide-menu">Icon</span>
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="sidebar-item">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('blank')}}" aria-expanded="false">
                                 <i class="mdi mdi-file"></i>
-                                <span class="hide-menu">Blank</span>
+                                <span class="hide-menu">Enregistrer emploi de temps</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('dashboard')}}" aria-expanded="false">
+                            <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{route('liste')}}" aria-expanded="false">
                                 <i class="mdi mdi-alert-outline"></i>
-                                <span class="hide-menu">404</span>
+                                <span class="hide-menu">Liste emploi de temps</span>
                             </a>
                         </li>
                     </ul>
